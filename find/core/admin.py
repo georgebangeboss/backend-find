@@ -3,4 +3,8 @@ from .models import Card
 
 # Register your models here.
 
-admin.site.register(Card)
+class CardAdmin(admin.ModelAdmin):
+    search_fields = ('id_string',)
+
+
+admin.site.register(Card,CardAdmin)
